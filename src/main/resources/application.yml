@@ -1,0 +1,18 @@
+server:
+  port: 8081
+  servlet:
+    context-path: ${CONTEXT_PATH:/authentication}
+
+
+spring:
+  oauth2:
+    client-id: clientid
+    secret: secret
+
+  data:
+    mongodb:
+      uri: mongodb://${MONGO_DB_USERNAME}:${MONGO_DB_PASSWORD}@${MONGO_DB_HOST:localhost}:${MONGO_DB_PORT:27017}/${MONGO_DB_DATABASE_NAME:test_auth}${MONGO_DB_LOCAL_CONFIG}
+
+server-to-server:
+  username: ${SERVER_TO_SERVER_USERNAME:admin}
+  password: ${SERVER_TO_SERVER_PASSWORD:admin}
